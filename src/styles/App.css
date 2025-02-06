@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+div {
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #00aaff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: url('/public/alt.cur'), pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0088cc;
+  cursor: url('/public/alt.cur'), pointer;
+}
+

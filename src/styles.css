@@ -1,0 +1,185 @@
+/* General Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    cursor: url('/public/normal.cur'), auto;
+}
+
+/* Change cursor when hovering over interactive elements */
+a, button, input[type="submit"], input[type="button"] {
+    cursor: url('/public/alt.cur'), pointer; /* Click cursor */
+}
+
+/* Ensure text areas and input fields use the text cursor */
+input[type="text"], textarea {
+    cursor: text;
+}
+
+/* Prevent Scrolling on Home Page */
+body.home {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    padding: 10px 20px; /* Keeps navbar compact */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height: 70px; /* Ensures navbar remains the same height */
+}
+
+.nav-logo {
+    height: 135px;  /* Adjust the height as needed */
+    width: auto;  /* Keeps the aspect ratio */
+    max-width: 400px; /* Optional, to limit the max width */
+    display: block;
+    object-fit: contain; /* Ensures the image scales properly */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 25px;  /* Increase spacing between links */
+    margin-right: 50px;  /* Prevents them from touching the right edge */
+    align-items: center;  /* Ensures vertical alignment */
+    justify-content: flex-end; /* Makes sure they stay aligned properly */
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+/* Hero Section with Slight Blur Background */
+.hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/public/background.png') no-repeat center center/cover;
+    filter: blur(4px); /* Slight Blur Effect */
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    color: #cccccc;
+    position: relative;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    cursor: url('/public/alt.cur'), pointer;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00aaff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: url('/public/alt.cur'), pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* About & Contact Page Styles (Separate Pages) */
+.about-page, .contact-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.about-page h2, .contact-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-page p, .contact-page p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #888;
+}
+
+.clickable {
+    cursor: url('/public/alt.cur') 16 16, pointer;
+}
